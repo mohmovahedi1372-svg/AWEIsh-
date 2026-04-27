@@ -1,0 +1,18 @@
+
+AWEIsh Water Detection Evalscript for Sentinel-2
+Description
+This script implements the Automated Water Extraction Index – shadow version (AWEIsh) using Sentinel-2 spectral bands within the Copernicus Sentinel Hub Evalscript environment.
+The AWEIsh index enhances open water detection and improves robustness in areas affected by terrain shadows, built-up regions, and cloud-related illumination variability.
+Reference: Feyisa, G. L., Meilby, H., Fensholt, R., & Proud, S. R. (2014).
+Automated Water Extraction Index: A new technique for surface water mapping using Landsat imagery. Remote Sensing of Environment, 140, 23–35.
+Sentinel-2 Bands Used
+The following Sentinel-2 spectral bands are utilized in this evalscript:
+• B03 – Green (560 nm)
+• B08 – Near Infrared (842 nm)
+• B11 – Shortwave Infrared 1 (1610 nm)
+• B12 – Shortwave Infrared 2 (2190 nm)
+Notes
+• The normalization range (approximately -0.5 to 0.5, scaled to 0-1) used for visualization may need to be adjusted based on the specific characteristics of your study area and the expected range of AWEIsh values.
+• For quantitative analysis, it is recommended to apply a thresholding method (e.g., selecting pixels where AWEIsh > 0) rather than relying solely on the visualization stretching.
+• This evalscript is compatible with the Copernicus Sentinel Hub Custom Scripts API, specifically version 3 (//VERSION=3).
+Prepared for scientific reproducibility and GitHub repository publication.
